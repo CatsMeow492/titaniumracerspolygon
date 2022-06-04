@@ -1,0 +1,6 @@
+npm init
+npx hardhat
+mkdir contracts && mkdir scripts
+npm install @openzeppelin/contracts
+npm install dotenv --save
+npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
