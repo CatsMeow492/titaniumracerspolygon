@@ -3,8 +3,8 @@ async function main() {
     const TRC = await ethers.getContractFactory("TRC")
   
     // Start deployment, returning a promise that resolves to a contract object
-    const TRC = await TRC.deploy()
-    console.log("Contract deployed to address:", TRC.address)
+    const trc = await TRC.deploy()
+    console.log("Contract deployed to address:", trc.address)
   }
   
   main()
