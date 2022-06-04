@@ -1,14 +1,14 @@
 {
-  "name": "polygontest",
+  "name": "trc",
   "version": "1.0.0",
-  "description": "A test NFT creator on the polygon testnet",
+  "description": "The core minting contract for TitaniumRacers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CatsMeow492/polygontest.git"
+    "url": "git+https://github.com/CatsMeow492/titaniumracerspolygon"
   },
   "keywords": [
     "polygon",
@@ -19,9 +19,9 @@
   "author": "Taylor M",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CatsMeow492/polygontest/issues"
+    "url": "https://github.com/CatsMeow492/titaniumracerspolygon/issues"
   },
-  "homepage": "https://github.com/CatsMeow492/polygontest#readme",
+  "homepage": "https://github.com/CatsMeow492/titaniumracerspolygon#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "ethers": "^5.6.8",
