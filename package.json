@@ -1,0 +1,31 @@
+{
+  "name": "polygontest",
+  "version": "1.0.0",
+  "description": "A test NFT creator on the polygon testnet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatsMeow492/polygontest.git"
+  },
+  "keywords": [
+    "polygon",
+    "nft",
+    "creator",
+    "solidity"
+  ],
+  "author": "Taylor M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CatsMeow492/polygontest/issues"
+  },
+  "homepage": "https://github.com/CatsMeow492/polygontest#readme",
+  "devDependencies": {
+    "hardhat": "^2.9.7"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0"
+  }
+}
