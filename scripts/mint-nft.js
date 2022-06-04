@@ -9,10 +9,13 @@ const METADATA = process.env.METADATA;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 
-// Minting function
-async function mintNFT(tokenURI) {
-    const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
+// Define our contract ABI (Application Binary Interface) & adresses
+const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
+const nftContract = new web3.eth.Contract(contract.abi, CONTRACT_ADDRESS);
 
+// Minting function
+const mintNFT = async function(tokenURI) {
+    const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
 
     //the transaction
     const tx = {
@@ -23,13 +26,14 @@ async function mintNFT(tokenURI) {
         'maxPriorityFeePerGas': 1999999987,
         'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
     };
-}
 
-// Sign the transaction
-const signedTx = await web3.eth.accounts.signTransaction(tx, PRIVATE_KEY);
-const transactionReceipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
+    // Sign the transaction
+    const signedTx = await web3.eth.accounts.signTransaction(tx, PRIVATE_KEY);
+    const transactionReceipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
 
-console.log(`Transaction receipt: ${JSON.stringify(transactionReceipt)}`);
+    console.log(`Transaction receipt: ${JSON.stringify(transactionReceipt)}`);
+
+};
 
 // Call the mintNFT function
 mintNFT(METADATA);
