@@ -15,3 +15,11 @@ npm install @maticnetwork/maticjs-web3
 
 ## Compile contracts
 npx hardhat compile
+
+## Deploy contracts
+npx hardhat run scripts/deploy.js --network matic
+
+## Modify .env with your keys and account information
+
+## Mint an NFT
+node scripts/mint-nft.js

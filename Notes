@@ -8,3 +8,4 @@ npx hardhat compile
 npm install @maticnetwork/maticjs-web3
 npx hardhat run scripts/deploy.js --network matic
 npm install @alch/alchemy-web3
+node scripts/mint-nft.js

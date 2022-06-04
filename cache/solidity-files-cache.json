@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/taylor/Documents/polygontest/contracts/MyNFT.sol": {
-      "lastModificationDate": 1654318520021,
-      "contentHash": "2f99a0d97380b157a2a7c758d7df975f",
+      "lastModificationDate": 1654381017284,
+      "contentHash": "a2dd3208ec88a4c6f1c7e6e0ea6b507c",
       "sourceName": "contracts/MyNFT.sol",
       "solcConfig": {
         "version": "0.8.1",
