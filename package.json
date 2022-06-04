@@ -1,14 +1,14 @@
 {
-  "name": "trc",
+  "name": "TitaniumRacers",
   "version": "1.0.0",
-  "description": "The core minting contract for TitaniumRacers",
+  "description": "The core contracts for TitaniumRacers minting.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CatsMeow492/titaniumracerspolygon"
+    "url": "git+https://github.com/CatsMeow492/titaniumracerspolygon.git"
   },
   "keywords": [
     "polygon",

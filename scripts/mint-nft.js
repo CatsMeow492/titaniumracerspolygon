@@ -10,7 +10,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 
 // Define our contract ABI (Application Binary Interface) & adresses
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
+const contract = require("../artifacts/contracts/TRC.sol/TRC.json");
 const nftContract = new web3.eth.Contract(contract.abi, CONTRACT_ADDRESS);
 
 // Minting function
