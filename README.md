@@ -1,4 +1,4 @@
-# polygontest
+# TitaniumRacers Mint
 
 ## Initialize
 npm init
