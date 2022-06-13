@@ -1,4 +1,4 @@
-//Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+// Do you want me to deploy and transfer ownership or deploy yourself?
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.1;
 
@@ -7,11 +7,27 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract TRC is ERC721URIStorage, Ownable {
+contract TitaniumRacers is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
+    bool isAdult = false;
 
     constructor() ERC721("TitaniumRacersTest", "TRC") {}
+    // Checks if the racer is an adult
+    modifier onlyAdult {
+        require(isAdult == true);
+        _;
+    }
+    // Checks if the racers ia a child
+    modifier onlyChild {
+        require(isAdult == false);
+        _;
+    }
+    // Sets adult status
+    function setAdult(bool _isAdult) internal onlyChild {
+        _isAdult = true;
+        isAdult = _isAdult;
+    }
 
     function mintNFT(address recipient, string memory tokenURI)
         public onlyOwner
